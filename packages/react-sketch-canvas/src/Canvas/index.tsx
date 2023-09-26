@@ -19,11 +19,12 @@ const loadImage = (url: string): Promise<HTMLImageElement> =>
   });
 
 function getCanvasWithViewBox(canvas: HTMLDivElement) {
+  
   const svgCanvas = canvas.firstChild?.cloneNode(true) as SVGElement;
 
   const width = canvas.offsetWidth;
   const height = canvas.offsetHeight;
-
+  console.log('fork test', canvas.offsetWidth, canvas.offsetHeight);
   svgCanvas.setAttribute("viewBox", `0 0 ${width} ${height}`);
 
   svgCanvas.setAttribute("width", width.toString());

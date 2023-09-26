@@ -180,7 +180,7 @@ export const Canvas = React.forwardRef<CanvasRef, CanvasProps>((props, ref) => {
       return new Promise<string>((resolve, reject) => {
         try {
           const canvas = canvasRef.current;
-
+          console.log('Export Image called');
           if (!canvas) {
             throw Error("Canvas not rendered yet");
           }
